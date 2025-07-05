@@ -1,0 +1,128 @@
+.whatsapp-container {
+  height: 100vh;
+  background-color: white;
+}
+
+.sidebar {
+  background-color: #ffffff;
+  border-right: 1px solid #e9edef;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.chat-area {
+  /* background-color: #e5ddd5;
+  background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png'); */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-header, .chat-header {
+  background-color: #f0f2f5;
+  border-bottom: 1px solid #e9edef;
+}
+
+/* .search-bar {
+  background-color: #f0f2f5;
+} */
+
+.chat-list {
+  overflow-y: auto;
+  height: calc(100% - 120px);
+}
+
+.chat-item {
+  border-bottom: 1px solid #f0f2f5;
+  cursor: pointer;
+}
+
+.chat-item:hover {
+  background-color: #f5f6f6;
+}
+
+.chat-item.active {
+  background-color: #f0f2f5;
+}
+
+.chat-avatar img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.messages-container {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 70%;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 7.5px;
+  position: relative;
+}
+
+.message.sent {
+  align-self: flex-end;
+  background-color: rgba(224, 240, 255, 1);
+  border-bottom-right-radius: 0;
+}
+
+.message.received {
+  align-self: flex-start;
+  background-color: #e2e1e4;
+  border-bottom-left-radius: 0;
+}
+
+.message.system-message {
+  justify-content: center;
+  background-color: transparent;
+}
+
+.sender-name {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 3px;
+}
+
+.message-bubble p {
+  margin-bottom: 5px;
+}
+
+.message-time {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #667781;
+}
+
+.message.sent .message-time {
+  color: rgba(71, 71, 71, 0.7);
+}
+
+/* .heart-icon {
+  margin-left: 5px;
+  color: #ff6b6b;
+} */
+
+.message-input {
+  background-color: #ffffff;
+  border-top: 1px solid #e9edef;
+}
+
+.message-input textarea {
+  border-radius: 8px;
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar, .chat-area {
+    width: 100%;
+  }
+}
